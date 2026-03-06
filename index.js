@@ -6,7 +6,6 @@ const { app, BrowserWindow, ipcMain, dialog, shell } = require('electron');
 const ImageConverter = require('./converters/ImageConverter');
 const Document = require('./converters/Document');
 const Media = require('./converters/Media');
-const { create } = require('domain');
 
 // Create main window
 function createWindow() {
@@ -23,7 +22,7 @@ function createWindow() {
             contextIsolation: true, // Isolation Context
             nodeIntegration: false // Node.js blocked for renderer
         },
-        icon: path.join(__dirname, 'assets', 'icon.ico')
+        icon: path.join(__dirname, 'assets', 'favicon.ico')
     });
 
     // UI
